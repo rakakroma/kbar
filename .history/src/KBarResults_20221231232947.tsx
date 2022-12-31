@@ -42,10 +42,6 @@ export const KBarResults: React.FC<KBarResultsProps> = (props) => {
 
   React.useEffect(() => {
     const handler = (event) => {
-      if(event.isComposing){
-        console.log(`composing`)
-        return
-      }
       if (event.key === "ArrowUp" || (event.ctrlKey && event.key === "p")) {
         event.preventDefault();
         query.setActiveIndex((index) => {
